@@ -4,13 +4,27 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project uses firestore to store user input data and views it.
 
-A few resources to get you started if this is your first Flutter project:
+# Widgets used in InputPage:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  - Scaffold
+      - body
+          - Center to centeralize content of the page
+            - SingleChildScrollView to make page scrollable
+                - Form to take data from user and validate it
+                    - Column to put widgets vertically
+                        - Image.asset to add and image
+                        - CustomTextField to ask the user to enter his username, age and favorite hobby
+                        - Row to put two of CustomButton horizontally
+                            - The first CustomTextField is used to save user data to firestore
+                            - The second CustomTextField shows up after the data is saved successfully to go to the next page
+# Widgets used in UserDetails Page:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ - Scaffold
+     - appBar to put title of the page
+     - body
+         - Column to put widgets vertically
+             - CircleAvatar to put a circular image
+             - Text to add username
+             - UserDetailItem to view username, age and favorite hobby
